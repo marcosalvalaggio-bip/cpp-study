@@ -1,13 +1,13 @@
 ## Guide to Vectors in C++:
 
-### Step 1: Including the necessary header file
+### Including the necessary header file
 To use vectors in C++, you need to include the `<vector>` header file at the beginning of your code.
 
 ```c++
 #include <vector>
 ```
 
-### Step 2: Declaring a vector
+### Declaring a vector
 You can declare a vector using the following syntax:
 
 ```c++
@@ -17,7 +17,7 @@ std::vector<type> name;
 Replace **type** with the desired data type of the elements in the vector, and name with the identifier you want to assign to the vector.
 
 
-### Step 3: Initializing a vector
+### Initializing a vector
 There are several ways to initialize a vector in C++. Here are a few examples:
 
 ```c++
@@ -34,7 +34,7 @@ std::vector<int> numbers = {1, 2, 3, 4, 5};
 std::vector<int> numbers(5, 10); // Creates a vector with 5 elements, all initialized to 10
 ```
 
-### Step 4: Accessing elements in a vector
+### Accessing elements in a vector
 You can access elements in a vector using the index operator ([]). The index starts at 0 for the first element.
 
 ```c++
@@ -44,7 +44,7 @@ int firstElement = numbers[0]; // Access the first element
 int thirdElement = numbers[2]; // Access the third element
 ```
 
-### Step 5: Modifying elements in a vector
+### Modifying elements in a vector
 You can modify elements in a vector using the index operator ([]) or the at() member function.
 
 ```c++
@@ -55,7 +55,7 @@ numbers.at(2) = 20; // Modify the third element
 ```
 
 
-### Step 6: Vector size and capacity
+### Vector size and capacity
 The size of a vector represents the number of elements currently stored in it, while the capacity refers to the maximum number of elements the vector can hold without reallocation.
 
 ```c++
@@ -65,7 +65,7 @@ int size = numbers.size(); // Get the current size of the vector
 int capacity = numbers.capacity(); // Get the current capacity of the vector
 ```
 
-### Step 7: Adding elements to a vector
+### Adding elements to a vector
 To add elements to the end of a vector, you can use the push_back() member function.
 
 ```c++
@@ -75,7 +75,7 @@ numbers.push_back(10); // Add 10 to the end of the vector
 numbers.push_back(20); // Add 20 to the end of the vector
 ```
 
-### Step 8: Removing elements from a vector
+### Removing elements from a vector
 To remove elements from a vector, you can use the pop_back() member function to remove the last element, or the erase() member function to remove a specific element.
 
 
@@ -86,7 +86,25 @@ numbers.pop_back(); // Remove the last element (5)
 numbers.erase(numbers.begin() + 2); // Remove the element at index 2 (3)
 ```
 
-### Step 9: Iterating
+### Find element in a vector
+The `<algorithm>` header provides the `std::find` algorithm, which searches for a given element in a range. It returns an iterator pointing to the first occurrence of the element or the end iterator if the element is not found. Here's an example:
+
+```c++
+#include <algorithm>
+#include <vector>
+
+int element = 3;
+auto it = std::find(numbers.begin(), numbers.end(), element);
+
+if (it != numbers.end()) {
+    std::cout << "Element found in the vector." << std::endl;
+} else {
+    std::cout << "Element not found in the vector." << std::endl;
+}
+```
+
+
+### Iterating
 Iterating over a vector in a smart way can be achieved using a range-based for loop in C++. Here's an example:
 
 ```c++
