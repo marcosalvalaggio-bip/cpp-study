@@ -47,6 +47,15 @@ std::string str = "Hello, world";
 std::string sub = str.substr(0, 5); // sub will contain "Hello"
 ```
 
+* Single Quotes (''):
+    * Single quotes are used to denote individual characters.
+    * When used with characters, single quotes are used to represent character literals.
+    * Example: 'A' represents the character 'A'.
+* Double Quotes (""):
+    * Double quotes are used to denote strings.
+    * When used with strings, double quotes are used to represent string literals.
+    * Example: "Hello" represents the string "Hello".
+
 ### Accessing and modifying individual characters in a string
 You can access individual characters in a `string` using the square bracket notation and the index of the character. Remember that the indices start from 0.
 
